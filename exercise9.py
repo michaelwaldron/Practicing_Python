@@ -35,4 +35,8 @@ while holder!= ans:
     if holder == ans:
         print("You won in %d guesses!" % tracker)
         break
+    elif holder < ans:
+        print("Too low, guess again!")
+    elif holder > ans:
+        print("Too high, guess again!")
     tracker += 1

@@ -18,11 +18,13 @@ def gen_pw(strength):
     track = 0
     password = ""
     while track < strength:
-        choose = random.randint(1,10)
-        if choose in range(1,2):
+        choose = random.randint(1,15)
+        if choose in range(1,3):
             password += chr(random.choice(uppers))
-        elif choose in range(3,9):
+        elif choose in range(4,12):
             password += chr(random.choice(lowers))
+        elif choose in range(13,14):
+            password += chr(random.choice(numbers))
         else:
             password += chr(random.choice(symbols))
         track += 1

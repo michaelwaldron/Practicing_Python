@@ -97,14 +97,25 @@ def playgame():
         if check(board(word,guesses)) == word:
             print(word)
             print("You win!")
+            win()
             break
     if check(board(word,guesses)) != word:
         man(count)
         print("You lose!")
         print("The word was: ", word)
 
+# Track wins
+wins = 0
+def win():
+    global wins
+    wins += 1
+
 play = 1
 while play == 1:
     playgame()
     play = int(input("Press 1 to play again: "))
+if wins == 1:
+    print("You won", wins, "time!")
+else:
+    print("You won", wins, "times!")
     
